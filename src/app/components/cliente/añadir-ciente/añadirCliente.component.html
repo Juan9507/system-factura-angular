@@ -1,0 +1,73 @@
+<div class="container col-md-6">
+  <div class="card">
+    <div class="card-header">
+      <h3>Agregar Cliente</h3>
+    </div>
+    <div  class="card-body">
+      <form [formGroup]="createCliente" (ngSubmit)="agregarCliente()">
+        <div class="form-group">
+          <label class="form-label" for="nombre">Nombre:</label>
+          <input
+            name="nombre"
+            formControlName="nombre"
+            placeholder="Nombre"
+            type="text"
+            class="form-control"
+          />
+        </div>
+
+        <div class="form-group">
+          <label class="label" for="apellido">Apellido:</label>
+          <input
+            name="apellido"
+            formControlName="apellido"
+            placeholder="Apellido"
+            type="text"
+            class="form-control"
+          />
+        </div>
+        <div class="form-group">
+          <label class="label" for="edad">direccion:</label>
+          <input
+            name="direccion"
+            formControlName="direccion"
+            placeholder="Direccion"
+            type="text"
+            class="form-control"
+          />
+        </div>
+        <div class="form-group">
+          <label class="label" for="fecha">Fecha nacimiento:</label>
+          <input
+            name="fechaNacimiento"
+            formControlName="fechaNacimiento"
+            placeholder="Fecha"
+            type="text"
+            class="form-control"
+          />
+        </div>
+        <div class="form-group">
+          <label class="label" for="telefono">Telefono:</label>
+          <input
+            name="telefono"
+            formControlName="telefono"
+            placeholder="Telefono"
+            type="text"
+            class="form-control"
+          />
+        </div>
+        <div class="form-group">
+          <label class="label" for="email">Email:</label>
+          <input
+            name="email"
+            formControlName="email"
+            placeholder="Email"
+            type="email"
+            class="form-control"
+          />
+        </div>
+        <button id="agregar" type="submit" class="btn btn-primary" [disabled]="createCliente.invalid">Agregar</button>
+      </form>
+    </div>
+  </div>
+</div>

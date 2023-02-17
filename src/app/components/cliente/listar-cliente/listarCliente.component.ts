@@ -20,6 +20,9 @@ export class ListarClienteComponent implements OnInit {
 
   }
 
+  /**
+   * Forma vieja
+   */
   listarClientes(): void {
     this.cliente.listar().subscribe((data) => {
       this.clientes = data;
@@ -30,6 +33,9 @@ export class ListarClienteComponent implements OnInit {
     })
   }
 
+  /**
+   * Forma nueva
+   */
   listarClientesNew(): void {
     this.cliente.listar().subscribe(
       {
@@ -40,6 +46,10 @@ export class ListarClienteComponent implements OnInit {
 
         error: (error: any) => {
           console.log(error)
+        },
+
+        complete: () => {
+          console.info('complete')
         }
 
       }

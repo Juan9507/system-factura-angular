@@ -6,22 +6,27 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ToastrModule } from 'ngx-toastr';
 import { HttpClientModule } from '@angular/common/http';
-import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { ListarClienteComponent } from './components/cliente/listar-cliente/listarCliente.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { AñadirClienteComponent } from './components/cliente/añadir-ciente/añadirCliente.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    ListarClienteComponent
+    ListarClienteComponent,
+    AñadirClienteComponent
   ],
   imports: [
+    ReactiveFormsModule,
     BrowserModule,
     BrowserAnimationsModule,
     ToastrModule.forRoot(),
     HttpClientModule,
     FormsModule,
-    AppRoutingModule,
+    ReactiveFormsModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

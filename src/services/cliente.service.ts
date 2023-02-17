@@ -17,4 +17,8 @@ constructor( private http: HttpClient  ) { }
     return this.http.get<Cliente[]>(this.url + 'listar/clientes')
   }
 
+  public crearCliente(cliente: Cliente): Observable<Cliente>{
+    return this.http.post<Cliente>(this.url, cliente)
+  }
+
 }
